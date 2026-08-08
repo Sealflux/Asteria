@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		if input_dir.x != 0:
 			$AnimatedSprite2D.flip_h = input_dir.x < 0
 		
-	# else:
-	# 	$AnimatedSprite2D.play("idle")
+	else:
+		$AnimatedSprite2D.play("idle")
 		
 	move_and_slide()
