@@ -1,31 +1,40 @@
 [gd_scene format=3 uid="uid://dxjynn7h65n3n"]
 
 [ext_resource type="PackedScene" uid="uid://2nk6y0ob2nk" path="res://scenes/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cjg6tuwdqg60n" path="res://scenes/tile_map_layer.tscn" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bjeqcws0nh3r8" path="res://scenes/wall.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node" unique_id=1288490240]
 
+[node name="TileMapLayer" parent="." unique_id=27572512 instance=ExtResource("1_jyhfs")]
+scale = Vector2(1, 1)
+
 [node name="Wall" parent="." unique_id=2033244087 instance=ExtResource("1_sugp2")]
+visible = false
 position = Vector2(557, -57)
 scale = Vector2(10, 1)
 
 [node name="Wall2" parent="." unique_id=1977297533 instance=ExtResource("1_sugp2")]
+visible = false
 position = Vector2(1, 545)
 scale = Vector2(20, 1)
 
 [node name="Wall3" parent="." unique_id=1328926285 instance=ExtResource("1_sugp2")]
+visible = false
 position = Vector2(-25, -360)
 scale = Vector2(1, 10)
 
 [node name="Wall4" parent="." unique_id=19591738 instance=ExtResource("1_sugp2")]
+visible = false
 position = Vector2(1109, -454)
 scale = Vector2(1, 10)
 
 [node name="Player" parent="." unique_id=873915427 instance=ExtResource("1_ig7tw")]
-scale = Vector2(4, 4)
+scale = Vector2(1, 1)
 
 [node name="SimpleTrap" parent="." unique_id=1179496802 instance=ExtResource("2_0xm2m")]
+visible = false
 position = Vector2(37, 92)
 scale = Vector2(1, 1)
 
