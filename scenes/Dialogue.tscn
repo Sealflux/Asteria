@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cno3xr6ywgkeg"]
+
+[ext_resource type="Script" uid="uid://baqyfevrp6p66" path="res://scripts/control.gd" id="1_myoxq"]
+[ext_resource type="Texture2D" uid="uid://dwgwphat8ni11" path="res://assets/icon.svg" id="1_v3dxv"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=650034865]
+
+[node name="Control" type="Control" parent="." unique_id=2107557079]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_myoxq")
+metadata/_edit_use_anchors_ = true
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Control" unique_id=167567807]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/HSplitContainer" unique_id=2117617724]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_v3dxv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/HSplitContainer" unique_id=1747446682]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Thuan Thuan Thuan Sahur"
+fit_content = true
