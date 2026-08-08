@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 
 	# Set velocity and move safely against walls
 	velocity = input_dir * SPEED
-	if velocity.length() > 0:
+	if input_dir.length() > 0:
 		$AnimatedSprite2D.play("walk")
 		
 		# Flips sprite hotizontally based off direction
