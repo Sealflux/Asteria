@@ -46,6 +46,15 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
 
+[sub_resource type="Gradient" id="Gradient_g2els"]
+offsets = PackedFloat32Array(0, 0.54086536, 0.9206731)
+colors = PackedColorArray(1, 1, 1, 1, 0.19607843, 0.19607843, 0.19607843, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sugp2"]
+gradient = SubResource("Gradient_g2els")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Player" type="CharacterBody2D" unique_id=438301327]
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
@@ -58,3 +67,6 @@ animation = &"walk"
 shape = SubResource("CapsuleShape2D_xrivr")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2055608867]
+texture = SubResource("GradientTexture2D_sugp2")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1369284386]
