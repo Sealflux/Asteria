@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dxjynn7h65n3n"]
+
+[ext_resource type="PackedScene" uid="uid://2nk6y0ob2nk" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://simple_trap.tscn" id="2_0xm2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(59, 58)
+
+[node name="Main" type="Node" unique_id=1288490240]
+
+[node name="Player" parent="." unique_id=873915427 instance=ExtResource("1_ig7tw")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=310451137]
+position = Vector2(94, 28)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2044568124]
+position = Vector2(30.5, 75)
+shape = SubResource("RectangleShape2D_13qdw")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=476983310]
+offset_top = 46.0
+offset_right = 61.0
+offset_bottom = 107.0
+
+[node name="SimpleTrap" parent="." unique_id=1179496802 instance=ExtResource("2_0xm2m")]
+position = Vector2(37, 92)
+scale = Vector2(1, 1)

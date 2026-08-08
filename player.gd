@@ -1,6 +1,6 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var speed = 400
+@export var SPEED = 400
 var screen_size
 
 
@@ -10,30 +10,10 @@ func _ready() -> void:
 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
-		
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		$AnimatedSprite2D.play()
-	else:
-		$AnimatedSprite2D.stop()
-		
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
-		
-		
-		
-		
-		
-		
-		
+func _physics_process(delta: float) -> void:
+	# Get input direction (Vector2)
+	var input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
+	# Set velocity and move safely against walls
+	velocity = input_dir * SPEED
+	move_and_slide()

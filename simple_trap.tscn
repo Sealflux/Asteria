@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dfe502ugfukk6"]
+
+[ext_resource type="Script" uid="uid://dc1sxrj31eydi" path="res://simple_trap.gd" id="1_s838w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(15, 15)
+
+[node name="SimpleTrap" type="Area2D" unique_id=1179496802]
+scale = Vector2(15, 15)
+script = ExtResource("1_s838w")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1063979500]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=245629280]
+position = Vector2(7.5, 7.5)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1106932747]
+offset_right = 15.0
+offset_bottom = 15.0
+color = Color(1, 0, 0, 1)

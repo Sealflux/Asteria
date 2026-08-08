@@ -46,7 +46,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
 
-[node name="Player" type="Area2D" unique_id=873915427]
+[node name="Player" type="CharacterBody2D" unique_id=438301327]
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
 
@@ -56,3 +56,5 @@ animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=436718228]
 shape = SubResource("CapsuleShape2D_xrivr")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2055608867]
