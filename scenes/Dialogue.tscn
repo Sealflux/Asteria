@@ -34,6 +34,9 @@ texture = ExtResource("1_v3dxv")
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/HSplitContainer" unique_id=1747446682]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 bbcode_enabled = true
-text = "Thuan Thuan Thuan Sahur"
+text = "Placeholder"
 fit_content = true
+
+[connection signal="gui_input" from="Control" to="Control" method="_on_gui_input"]
