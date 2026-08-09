@@ -432,7 +432,8 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "Some kind of ability to reveal walls so constantly bumping into walls isn't as frustrating"
+text = "Some kind of ability to reveal walls so constantly bumping into walls isn't as frustrating
+(Please choose this for first level as its hard)"
 autowrap_mode = 3
 
 [node name="ClassAmount" type="Label" parent="Control/HBoxContainer/NavigatorBox/PanelContainer/VBoxContainer" unique_id=1926091344]
