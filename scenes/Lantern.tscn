@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://f5j5nds1m5na"]
 
-[ext_resource type="Texture2D" uid="uid://cbqcd5x7vicmx" path="res://assets/shattered_lantern.png" id="1_hhuhv"]
+[ext_resource type="Texture2D" uid="uid://ca8b0aixc5wtj" path="res://assets/shattered_lantern.png" id="1_hhuhv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uxgnm"]
 animations = [{
@@ -15,7 +15,7 @@ animations = [{
 
 [sub_resource type="Gradient" id="Gradient_g2els"]
 offsets = PackedFloat32Array(0, 0.54086536, 0.9206731)
-colors = PackedColorArray(1, 1, 1, 1, 0.19607843, 0.19607843, 0.19607843, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.690625, 0.9883984, 1, 1, 0.6901961, 0.9882353, 1, 0.19607843, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jqqsp"]
 gradient = SubResource("Gradient_g2els")
@@ -30,5 +30,6 @@ scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_uxgnm")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=489018535]
+blend_mode = 2
 texture = SubResource("GradientTexture2D_jqqsp")
 texture_scale = 8.0

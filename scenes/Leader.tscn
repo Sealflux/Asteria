@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://2nk6y0ob2nk"]
 
-[ext_resource type="Script" uid="uid://bqtnq5pn84sgi" path="res://scripts/Leader.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://d0k4p5bjarmwg" path="res://assets/Starseeker_Idle_horizontal.png" id="2_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://ckww7g8vuswkq" path="res://assets/Starseeker_walk_horizontal.png" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://6sb5v658772u" path="res://scripts/leader.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cwapxtp4qm8cy" path="res://assets/Starseeker_Idle_horizontal.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cfftc7d6jeedx" path="res://assets/Starseeker_walk_horizontal.png" id="3_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_qhqgy")
@@ -93,7 +93,7 @@ height = 56.0
 
 [sub_resource type="Gradient" id="Gradient_g2els"]
 offsets = PackedFloat32Array(0, 0.54086536, 0.9206731)
-colors = PackedColorArray(1, 1, 1, 1, 0.19607843, 0.19607843, 0.19607843, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.784375, 0.8989258, 1, 1, 0.78431374, 0.8980392, 1, 0.19607843, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sugp2"]
 gradient = SubResource("Gradient_g2els")
@@ -116,6 +116,7 @@ frame_progress = 0.037501156
 shape = SubResource("CapsuleShape2D_xrivr")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2055608867]
+blend_mode = 2
 texture = SubResource("GradientTexture2D_sugp2")
 texture_scale = 5.0
 
