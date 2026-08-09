@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cno3xr6ywgkeg"]
 
 [ext_resource type="Script" uid="uid://baqyfevrp6p66" path="res://scripts/control.gd" id="1_c5dbn"]
-[ext_resource type="Texture2D" uid="uid://rimieqvskwkf" path="res://assets/dialoguebox.png" id="2_b7h3t"]
-[ext_resource type="Texture2D" uid="uid://d0k4p5bjarmwg" path="res://assets/Starseeker_Idle_horizontal.png" id="3_27qtj"]
-[ext_resource type="Texture2D" uid="uid://ckww7g8vuswkq" path="res://assets/Starseeker_walk_horizontal.png" id="4_vejxe"]
+[ext_resource type="Texture2D" uid="uid://d0cvoj6ecv8g3" path="res://assets/dialogueboxleft.png" id="2_b7h3t"]
+[ext_resource type="Texture2D" uid="uid://cwapxtp4qm8cy" path="res://assets/Starseeker_Idle_horizontal.png" id="3_27qtj"]
+[ext_resource type="Texture2D" uid="uid://e3hj7udrs276" path="res://assets/dialogueboxright.png" id="3_vejxe"]
+[ext_resource type="Texture2D" uid="uid://cfftc7d6jeedx" path="res://assets/Starseeker_walk_horizontal.png" id="4_vejxe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("3_27qtj")
@@ -120,28 +121,28 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 54.0
-offset_top = 295.0
-offset_right = -224.0
-offset_bottom = 135.0
+offset_left = 122.0
+offset_top = 185.0
+offset_right = -101.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_b7h3t")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2054584588]
+[node name="TextureRect3" type="TextureRect" parent="Control" unique_id=2004555730]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 596.0
-offset_top = 294.0
-offset_right = 318.0
-offset_bottom = 134.0
+offset_left = 150.0
+offset_top = 185.0
+offset_right = 224.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_b7h3t")
+texture = ExtResource("3_vejxe")
 expand_mode = 2
 stretch_mode = 4
 
