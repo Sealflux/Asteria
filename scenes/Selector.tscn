@@ -1,0 +1,496 @@
+[gd_scene format=3 uid="uid://p2qvefaepper"]
+
+[ext_resource type="Texture2D" uid="uid://cwapxtp4qm8cy" path="res://assets/Starseeker_Idle_horizontal.png" id="1_0rn1r"]
+[ext_resource type="Script" uid="uid://dgt1vj60u5vdo" path="res://scripts/Selector.gd" id="1_op8ai"]
+[ext_resource type="Texture2D" uid="uid://cfftc7d6jeedx" path="res://assets/Starseeker_walk_horizontal.png" id="2_hr2hs"]
+[ext_resource type="Texture2D" uid="uid://cdk360ttgc4a8" path="res://assets/navigator (1).png" id="3_aj0ny"]
+[ext_resource type="Texture2D" uid="uid://3ra7dc2ae2wv" path="res://assets/navigator_walking (1).png" id="4_d74e5"]
+[ext_resource type="Texture2D" uid="uid://dhf8vc5pdhvsn" path="res://assets/trapmaster.png" id="5_pvkvw"]
+[ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="6_op8ai"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("1_0rn1r")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_0rn1r")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("1_0rn1r")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_0rn1r")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("1_0rn1r")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("1_0rn1r")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aj0ny"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 7.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hag2f"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjt4n"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoywy"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51v06"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbnvw"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u767g"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3qw6"]
+atlas = ExtResource("4_d74e5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etuwy"]
+atlas = ExtResource("4_d74e5")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdx13"]
+atlas = ExtResource("4_d74e5")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msv0k"]
+atlas = ExtResource("4_d74e5")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfp6t"]
+atlas = ExtResource("4_d74e5")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4cl8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hag2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjt4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoywy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51v06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbnvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u767g")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3qw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etuwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdx13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msv0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfp6t")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuwyn"]
+atlas = ExtResource("5_pvkvw")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el2cw"]
+atlas = ExtResource("5_pvkvw")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrvf0"]
+atlas = ExtResource("5_pvkvw")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alp6k"]
+atlas = ExtResource("5_pvkvw")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m2td"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up6j6"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkviq"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb362"]
+atlas = ExtResource("2_hr2hs")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trwl0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuwyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el2cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrvf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alp6k")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m2td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up6j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkviq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb362")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 7.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywftf"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mny78"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8og8w"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkska"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kyno"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhdjm"]
+atlas = ExtResource("3_aj0ny")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj4j3"]
+atlas = ExtResource("6_op8ai")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fma43"]
+atlas = ExtResource("6_op8ai")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7hqv"]
+atlas = ExtResource("6_op8ai")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvusm"]
+atlas = ExtResource("6_op8ai")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4fqi"]
+atlas = ExtResource("6_op8ai")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggq4x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywftf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mny78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8og8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkska")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kyno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhdjm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj4j3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fma43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7hqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvusm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4fqi")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=435881065]
+
+[node name="Control" type="Control" parent="." unique_id=663910764]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_op8ai")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1481827909]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer" unique_id=465513484]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer" unique_id=470145062]
+sprite_frames = SubResource("SpriteFrames_aj0ny")
+animation = &"idle"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=463737236]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=574936670]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Leader"
+autowrap_mode = 3
+
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=1943503764]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Ability to recruit one additional survivor after each level."
+autowrap_mode = 3
+
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=616594565]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Remaining: 1"
+autowrap_mode = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/HBoxContainer" unique_id=1942749186]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer2" unique_id=1246878421]
+sprite_frames = SubResource("SpriteFrames_4cl8a")
+animation = &"walk"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=285452994]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=370794186]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Navigator"
+autowrap_mode = 3
+
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=611692891]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Some kind of ability to reveal walls so constantly bumping into walls isn't as frustrating"
+autowrap_mode = 3
+
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=1926091344]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Remaining: 1"
+autowrap_mode = 3
+
+[node name="PanelContainer3" type="PanelContainer" parent="Control/HBoxContainer" unique_id=1822573112]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer3" unique_id=664343489]
+sprite_frames = SubResource("SpriteFrames_trwl0")
+animation = &"idle"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1758342315]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer3" unique_id=1237479482]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Trapmaster"
+autowrap_mode = 3
+
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer3" unique_id=208869064]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Reveals a random trap on the map at the start of each round"
+autowrap_mode = 3
+
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer3" unique_id=410162198]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Remaining: 1"
+autowrap_mode = 3
+
+[node name="PanelContainer4" type="PanelContainer" parent="Control/HBoxContainer" unique_id=120755805]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer4" unique_id=51495674]
+sprite_frames = SubResource("SpriteFrames_ggq4x")
+animation = &"walk"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1464845944]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer4" unique_id=1532251177]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Scholar"
+autowrap_mode = 3
+
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer4" unique_id=1655818437]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Ability to decipher symbols, signs and tracks that reveal information about the map."
+autowrap_mode = 3
+
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer4" unique_id=1105115420]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Remaining: 1"
+autowrap_mode = 3

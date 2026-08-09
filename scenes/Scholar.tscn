@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://kfseh1tmuyxe"]
+
+[ext_resource type="Texture2D" uid="uid://b670e0bdmgote" path="res://assets/scholar_walk (1).png" id="2_hj4j3"]
+[ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="2_qyqna"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fma43"]
+atlas = ExtResource("2_qyqna")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7hqv"]
+atlas = ExtResource("2_qyqna")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvusm"]
+atlas = ExtResource("2_qyqna")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4fqi"]
+atlas = ExtResource("2_qyqna")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jai2q"]
+atlas = ExtResource("2_qyqna")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu5ng"]
+atlas = ExtResource("2_hj4j3")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm4f1"]
+atlas = ExtResource("2_hj4j3")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sv5q"]
+atlas = ExtResource("2_hj4j3")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmfj3"]
+atlas = ExtResource("2_hj4j3")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6k5vl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fma43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7hqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvusm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4fqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jai2q")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu5ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm4f1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sv5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmfj3")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hag2f"]
+radius = 15.0
+height = 56.0
+
+[sub_resource type="Gradient" id="Gradient_g2els"]
+offsets = PackedFloat32Array(0, 0.54086536, 0.9206731)
+colors = PackedColorArray(0.784375, 0.8989258, 1, 1, 0.78431374, 0.8980392, 1, 0.19607843, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wjt4n"]
+gradient = SubResource("Gradient_g2els")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hoywy"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_w8tit"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_51v06"]
+gradient = SubResource("Gradient_w8tit")
+width = 2
+height = 2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rbnvw"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 4.0
+
+[node name="Scholar" type="CharacterBody2D" unique_id=795273243]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206561506]
+position = Vector2(3.5762787e-06, -3.5762787e-06)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_6k5vl")
+animation = &"walk"
+frame_progress = 0.93984544
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=394963895]
+shape = SubResource("CapsuleShape2D_hag2f")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1789591534]
+blend_mode = 2
+texture = SubResource("GradientTexture2D_wjt4n")
+texture_scale = 5.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2051425073]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1110668345]
+material = SubResource("CanvasItemMaterial_hoywy")
+emitting = false
+amount = 3000
+texture = SubResource("GradientTexture2D_51v06")
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_rbnvw")

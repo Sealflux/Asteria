@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://i4y8y7kk05vr"]
 
 [ext_resource type="PackedScene" uid="uid://cjg6tuwdqg60n" path="res://scenes/tile_map_layer.tscn" id="1_5kldx"]
-[ext_resource type="Script" uid="uid://cwytckyyotqip" path="res://scripts/map_2.gd" id="1_rtqf6"]
+[ext_resource type="Script" uid="uid://msx30w4xbmdw" path="res://scripts/map_2.gd" id="1_rtqf6"]
 [ext_resource type="PackedScene" uid="uid://e8i4d4wx30uk" path="res://scenes/tilemaplayer_2.tscn" id="2_rtqf6"]
 [ext_resource type="PackedScene" uid="uid://2nk6y0ob2nk" path="res://scenes/Leader.tscn" id="3_u6ti8"]
 [ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="4_rutqx"]
-[ext_resource type="Script" uid="uid://dr41vktl6em8b" path="res://scripts/tilemaplayer_2.gd" id="4_u6ti8"]
+[ext_resource type="Script" uid="uid://cbh3rhrv0vhh3" path="res://scripts/tilemaplayer_2.gd" id="4_u6ti8"]
 
 [node name="Map" type="Node2D" unique_id=374711144]
 script = ExtResource("1_rtqf6")

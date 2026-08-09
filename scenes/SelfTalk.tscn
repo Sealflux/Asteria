@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cno3xr6ywgkeg"]
 
-[ext_resource type="Script" uid="uid://baqyfevrp6p66" path="res://scripts/control.gd" id="1_c5dbn"]
+[ext_resource type="Script" uid="uid://baqyfevrp6p66" path="res://scripts/Dialogue.gd" id="1_c5dbn"]
 [ext_resource type="Texture2D" uid="uid://d0cvoj6ecv8g3" path="res://assets/dialogueboxleft.png" id="2_b7h3t"]
 [ext_resource type="Texture2D" uid="uid://cwapxtp4qm8cy" path="res://assets/Starseeker_Idle_horizontal.png" id="3_27qtj"]
 [ext_resource type="Texture2D" uid="uid://e3hj7udrs276" path="res://assets/dialogueboxright.png" id="3_vejxe"]

@@ -56,7 +56,7 @@ func _on_survivor_died(Survivor) -> void:
 	else:
 		ShowDialogue()
 func ShowDialogue():
-	DialogueBox = preload("res://scenes/SelfTalk.tscn")
+	DialogueBox = preload("res://scenes/Selector.tscn")
 	var NewDialogueBox = DialogueBox.instantiate()
 	add_child(NewDialogueBox)
 
