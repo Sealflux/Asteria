@@ -11,5 +11,5 @@ func _on_body_entered(body: Node2D) -> void:
 		print("ow")
 		# damage/kill
 		survivor_died.emit(body)
-		spawn_survivor.emit(1,Vector2(0,0))
+		spawn_survivor.emit()
 		

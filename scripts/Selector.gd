@@ -3,6 +3,7 @@ var LeaderBox
 var NavigatorBox
 var TrapmasterBox
 var ScholarBox
+signal SpawnSurvivor
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -93,7 +94,7 @@ func _on_trapmaster_box_mouse_exited() -> void:
 	# Configure the style
 	style.bg_color = Color(0.0, 0.0, 0.0, 1.0)       # Background color
 	TrapmasterBox.add_theme_stylebox_override("panel", style)  
-
+	
 
 func _on_scholar_box_mouse_exited() -> void:
 	print("Mouse Left ScholarBox")
@@ -105,3 +106,11 @@ func _on_scholar_box_mouse_exited() -> void:
 	style.bg_color = Color(0.0, 0.0, 0.0, 1.0)       # Background color
 	ScholarBox.add_theme_stylebox_override("panel", style)  
 	
+
+
+func _on_leader_box_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_pressed():
+		print("LeaderBox Clicked")
+		self.queue_free()
+		SpawnSurvivor.emit(1, Vector2(0,0))
+		

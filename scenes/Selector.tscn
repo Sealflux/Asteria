@@ -555,6 +555,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
 sprite_frames = SubResource("SpriteFrames_ggq4x")
 animation = &"walk"
 
+[connection signal="gui_input" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_gui_input"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_entered"]
 [connection signal="mouse_exited" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_exited"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_mouse_entered"]
