@@ -62,6 +62,7 @@ func type_text(new_text: String) -> void:
 	
 	tween = create_tween()
 	
+	
 	# Loop through each character
 	for i in range(total_chars):
 		# Reveal one character
