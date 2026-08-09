@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://cno3xr6ywgkeg"]
+
+[ext_resource type="Script" uid="uid://baqyfevrp6p66" path="res://scripts/control.gd" id="1_myoxq"]
+[ext_resource type="Texture2D" uid="uid://rimieqvskwkf" path="res://assets/dialoguebox.png" id="2_cfanh"]
+[ext_resource type="Texture2D" uid="uid://d0k4p5bjarmwg" path="res://assets/Starseeker_Idle_horizontal.png" id="2_y6djt"]
+[ext_resource type="Texture2D" uid="uid://ckww7g8vuswkq" path="res://assets/Starseeker_walk_horizontal.png" id="3_cfanh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_y6djt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_y6djt")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_y6djt")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_y6djt")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_y6djt")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("2_y6djt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("3_cfanh")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("3_cfanh")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("3_cfanh")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("3_cfanh")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7f5y4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 7.5
+}]
+
+[sub_resource type="GDScript" id="GDScript_y6djt"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=650034865]
+
+[node name="Control" type="Control" parent="." unique_id=2107557079]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_myoxq")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2054584588]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0034722222
+anchor_top = -0.4351852
+anchor_right = 0.9965278
+anchor_bottom = 1.5478395
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cfanh")
+metadata/_edit_use_anchors_ = true
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Control" unique_id=167567807]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/HSplitContainer" unique_id=155085390]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HSplitContainer/PanelContainer" unique_id=756989077]
+position = Vector2(285, 323.99997)
+scale = Vector2(4.453125, 5.0624995)
+sprite_frames = SubResource("SpriteFrames_7f5y4")
+animation = &"idle"
+frame = 5
+frame_progress = 0.3610479
+
+[node name="Label" type="Label" parent="Control/HSplitContainer" unique_id=159111544]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Placeholder"
+script = SubResource("GDScript_y6djt")
+
+[connection signal="gui_input" from="Control" to="Control" method="_on_gui_input"]
+[connection signal="tree_entered" from="Control" to="Control" method="_on_tree_entered"]
+[connection signal="tree_exited" from="Control" to="Control" method="_on_tree_exited"]

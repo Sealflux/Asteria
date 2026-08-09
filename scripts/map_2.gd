@@ -47,10 +47,10 @@ func _on_survivor_died(Survivor) -> void:
 	print("Death")
 	Survivor.queue_free()
 	spawn_Lantern(Survivor.position)
-func ShowDialogue(position: Vector2):
+	ShowDialogue()
+func ShowDialogue():
 	DialogueBox = preload("res://scenes/Dialogue.tscn")
 	var NewDialogueBox = DialogueBox.instantiate()
-	NewDialogueBox.position = Vector2(0,0)
 	add_child(NewDialogueBox)
 
 func spawn_Lantern(position: Vector2):
