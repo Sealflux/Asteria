@@ -72,6 +72,7 @@ func spawn_Lantern(position: Vector2):
 script = SubResource("GDScript_5kldx")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1360810343]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="TileMapLayer" parent="." unique_id=27572512 instance=ExtResource("1_5kldx")]

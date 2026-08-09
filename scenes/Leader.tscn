@@ -107,7 +107,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2053454023]
 position = Vector2(3.5762787e-06, -3.5762787e-06)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"idle"
 frame_progress = 0.037501156
