@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dhf8vc5pdhvsn" path="res://assets/trapmaster.png" id="5_pvkvw"]
 [ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="6_op8ai"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb362"]
+bg_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op8ai"]
 bg_color = Color(0.60079145, 0.6003641, 0.59227294, 1)
 
@@ -93,6 +96,8 @@ animations = [{
 "name": &"walk",
 "speed": 7.5
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mny78"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hag2f"]
 atlas = ExtResource("3_aj0ny")
@@ -184,6 +189,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6m2td"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_uuwyn"]
 atlas = ExtResource("5_pvkvw")
 region = Rect2(0, 0, 128, 128)
@@ -252,6 +259,8 @@ animations = [{
 "name": &"walk",
 "speed": 7.5
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkviq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ywftf"]
 atlas = ExtResource("3_aj0ny")
@@ -370,7 +379,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rb362")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/LeaderBox/PanelContainer" unique_id=463737236]
 layout_mode = 2
@@ -416,7 +425,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mny78")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/NavigatorBox/PanelContainer" unique_id=802163123]
 layout_mode = 2
@@ -462,7 +471,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6m2td")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer" unique_id=724728281]
 layout_mode = 2
@@ -508,7 +517,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nkviq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/ScholarBox/PanelContainer" unique_id=33677181]
 layout_mode = 2
@@ -547,6 +556,10 @@ sprite_frames = SubResource("SpriteFrames_ggq4x")
 animation = &"walk"
 
 [connection signal="mouse_entered" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_entered"]
+[connection signal="mouse_exited" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_exited"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_mouse_entered"]
+[connection signal="mouse_exited" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_mouse_exited"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/TrapmasterBox" to="Control" method="_on_trapmaster_box_mouse_entered"]
+[connection signal="mouse_exited" from="Control/HBoxContainer/TrapmasterBox" to="Control" method="_on_trapmaster_box_mouse_exited"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/ScholarBox" to="Control" method="_on_scholar_box_mouse_entered"]
+[connection signal="mouse_exited" from="Control/HBoxContainer/ScholarBox" to="Control" method="_on_scholar_box_mouse_exited"]
