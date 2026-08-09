@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyddfyrgb2f2r"
-path="res://.godot/imported/Artic-Ice-Tile-1-01.webp-659a3d1961c3f854ef2039592f7a32e4.ctex"
+uid="uid://d0cvoj6ecv8g3"
+path="res://.godot/imported/dialogueboxleft.png-6c52a3e5e9f2b8591d336da2c75f890d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Artic-Ice-Tile-1-01.webp"
-dest_files=["res://.godot/imported/Artic-Ice-Tile-1-01.webp-659a3d1961c3f854ef2039592f7a32e4.ctex"]
+source_file="res://assets/dialogueboxleft.png"
+dest_files=["res://.godot/imported/dialogueboxleft.png-6c52a3e5e9f2b8591d336da2c75f890d.ctex"]
 
 [params]
 
