@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxiuyqgm08c8d"
-path="res://.godot/imported/Asteria Demo Tilemap.png-bf9be09bbb992949329890131d910a41.ctex"
+uid="uid://c7r4m2v4cs67x"
+path="res://.godot/imported/Asteria Demo Tilemap (2).png-60f9f99c0e456e6890c39df8ac3742d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Asteria Demo Tilemap.png"
-dest_files=["res://.godot/imported/Asteria Demo Tilemap.png-bf9be09bbb992949329890131d910a41.ctex"]
+source_file="res://assets/Asteria Demo Tilemap (2).png"
+dest_files=["res://.godot/imported/Asteria Demo Tilemap (2).png-60f9f99c0e456e6890c39df8ac3742d4.ctex"]
 
 [params]
 
