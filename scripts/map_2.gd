@@ -50,8 +50,11 @@ func _on_survivor_died(Survivor) -> void:
 	print("Death")
 	Survivor.queue_free()
 	spawn_Lantern(Survivor.position)
-	ShowDialogue()
-	print("Play Dialogue")
+	spawn_Lantern(Vector2i(96,96))
+	if $Control:
+		$Control.queue_free()
+	else:
+		ShowDialogue()
 func ShowDialogue():
 	DialogueBox = preload("res://scenes/SelfTalk.tscn")
 	var NewDialogueBox = DialogueBox.instantiate()

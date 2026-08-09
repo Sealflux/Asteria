@@ -122,6 +122,7 @@ script = ExtResource("1_c5dbn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control" unique_id=251691774]
 position = Vector2(415, 419.99997)
+max_polyphony = 20
 
 [node name="TextureRect2" type="TextureRect" parent="Control" unique_id=525996807]
 layout_mode = 1
@@ -153,22 +154,23 @@ texture = ExtResource("3_vejxe")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="HSplitContainer" type="HSplitContainer" parent="Control" unique_id=167567807]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=855123107]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.13802083
-anchor_top = 0.6481481
-anchor_right = 0.5729167
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 159.0
+offset_top = 420.0
+offset_right = -492.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/HSplitContainer" unique_id=155085390]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer" unique_id=155085390]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HSplitContainer/PanelContainer" unique_id=756989077]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer" unique_id=756989077]
 position = Vector2(126.000015, 118.00003)
 scale = Vector2(1.9, 1.5435)
 sprite_frames = SubResource("SpriteFrames_7f5y4")
@@ -176,15 +178,13 @@ animation = &"idle"
 frame = 5
 frame_progress = 0.3610479
 
-[node name="Label" type="Label" parent="Control/HSplitContainer" unique_id=159111544]
+[node name="Label" type="Label" parent="Control/HBoxContainer" unique_id=159111544]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Placeholder"
+autowrap_mode = 3
 script = SubResource("GDScript_y6djt")
-
-[node name="Timer" type="Timer" parent="Control/HSplitContainer/Label" unique_id=1286754363]
-wait_time = 0.05
 
 [connection signal="gui_input" from="Control" to="Control" method="_on_gui_input"]
 [connection signal="tree_entered" from="Control" to="Control" method="_on_tree_entered"]
