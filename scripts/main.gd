@@ -44,7 +44,7 @@ func _spawn_Survivor(survivor : int, positioncoords: Vector2):
 	CurrentSurvivor.position = positioncoords
 	add_child(CurrentSurvivor)
 func _on_survivor_died(Survivor) -> void:
-	print("Death")
+	print("Skibdi")
 	print("Guh")
 	Survivor.queue_free()
 	spawn_Lantern(Survivor.position)
