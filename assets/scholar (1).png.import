@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpjqjpo7dqf20"
-path="res://.godot/imported/asteria_tilemap.png-ed6f458a6d93656a4949a2e97151902e.ctex"
+uid="uid://dmcyh3eti23o0"
+path="res://.godot/imported/scholar (1).png-3436556ba849de20e28036ea8de8851b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/asteria_tilemap.png"
-dest_files=["res://.godot/imported/asteria_tilemap.png-ed6f458a6d93656a4949a2e97151902e.ctex"]
+source_file="res://assets/scholar (1).png"
+dest_files=["res://.godot/imported/scholar (1).png-3436556ba849de20e28036ea8de8851b.ctex"]
 
 [params]
 

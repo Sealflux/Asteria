@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpjqjpo7dqf20"
-path="res://.godot/imported/asteria_tilemap.png-ed6f458a6d93656a4949a2e97151902e.ctex"
+uid="uid://b284v8oa6tckn"
+path="res://.godot/imported/trapmaster_trapfound.png-d801fcd1d2069ce2f0953321b6050a10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/asteria_tilemap.png"
-dest_files=["res://.godot/imported/asteria_tilemap.png-ed6f458a6d93656a4949a2e97151902e.ctex"]
+source_file="res://assets/trapmaster_trapfound.png"
+dest_files=["res://.godot/imported/trapmaster_trapfound.png-d801fcd1d2069ce2f0953321b6050a10.ctex"]
 
 [params]
 
