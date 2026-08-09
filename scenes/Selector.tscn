@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dhf8vc5pdhvsn" path="res://assets/trapmaster.png" id="5_pvkvw"]
 [ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="6_op8ai"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb362"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8a7m2"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op8ai"]
@@ -97,7 +97,8 @@ animations = [{
 "speed": 7.5
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mny78"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r1tl"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hag2f"]
 atlas = ExtResource("3_aj0ny")
@@ -189,7 +190,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6m2td"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plydf"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uuwyn"]
 atlas = ExtResource("5_pvkvw")
@@ -260,7 +262,8 @@ animations = [{
 "speed": 7.5
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkviq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ntmo"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ywftf"]
 atlas = ExtResource("3_aj0ny")
@@ -379,7 +382,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_rb362")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8a7m2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/LeaderBox/PanelContainer" unique_id=463737236]
 layout_mode = 2
@@ -425,7 +428,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mny78")
+theme_override_styles/panel = SubResource("StyleBoxFlat_2r1tl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/NavigatorBox/PanelContainer" unique_id=802163123]
 layout_mode = 2
@@ -471,7 +474,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_6m2td")
+theme_override_styles/panel = SubResource("StyleBoxFlat_plydf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer" unique_id=724728281]
 layout_mode = 2
@@ -517,7 +520,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_nkviq")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ntmo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/ScholarBox/PanelContainer" unique_id=33677181]
 layout_mode = 2

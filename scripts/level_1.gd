@@ -6,21 +6,19 @@ var DialogueBox
 var SelectSurvivor
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in range(10):
+	for i in range(11):
 		var node_path = "SimpleTrap" + str(i)
 		# Check if node exists before accessing to avoid errors
 		if has_node(node_path):
 			var trap_node = get_node(node_path)
 			trap_node.survivor_died.connect(_on_survivor_died)
 			trap_node.spawn_survivor.connect(_spawn_Survivor)
-		var Trap = get_node("SimpleTrap")
-
-	
 
 func _spawn_Survivor():
 	SelectSurvivor = preload("res://scenes/Selector.tscn")
-	var NewSelectScreen = SelectSurvivor.instantiate()
-	add_child(NewSelectScreen)
+	if has_node("Selector") == null:
+		var NewSelectScreen = SelectSurvivor.instantiate()
+		add_child(NewSelectScreen)
 func _on_survivor_died(Survivor) -> void:
 	print("Death")
 	Survivor.queue_free()

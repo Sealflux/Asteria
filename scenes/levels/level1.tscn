@@ -522,41 +522,51 @@ environment = SubResource("Environment_1seuy")
 position = Vector2(-221, -51)
 
 [node name="SimpleTrap" parent="." unique_id=1179496802 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(-115.00001, 8)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap2" parent="." unique_id=2057740834 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(-52, -55)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap3" parent="." unique_id=1982056908 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(13, 8)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap4" parent="." unique_id=303450953 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(-51, 72)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap5" parent="." unique_id=1257356159 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(77, -248)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap6" parent="." unique_id=2087909748 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(460, -117.000015)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap7" parent="." unique_id=1180744202 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(334.00003, 198.99998)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap8" parent="." unique_id=197808032 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(141, 198)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap9" parent="." unique_id=1422245496 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(-117, 201)
 scale = Vector2(3, 3)
 
 [node name="SimpleTrap10" parent="." unique_id=689060398 instance=ExtResource("4_bfxgj")]
+visible = false
 position = Vector2(-306, 137)
 scale = Vector2(3, 3)
