@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjsevrm1ebs8k"]
 
-[ext_resource type="Script" uid="uid://dfetx2pj5ic68" path="res://scripts/trapmaster.gd" id="1_mmamg"]
+[ext_resource type="Script" uid="uid://dfetx2pj5ic68" path="res://scripts/Trapmaster.gd" id="1_mmamg"]
 [ext_resource type="Texture2D" uid="uid://dhf8vc5pdhvsn" path="res://assets/trapmaster.png" id="2_mmamg"]
 [ext_resource type="Texture2D" uid="uid://bkgblehf11rk7" path="res://assets/trapmaster_walk.png" id="3_mmamg"]
 
@@ -94,7 +94,7 @@ script = ExtResource("1_mmamg")
 position = Vector2(3.5762787e-06, -3.5762787e-06)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_jrvf0")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1406287543]
 shape = SubResource("CapsuleShape2D_alp6k")

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://kfseh1tmuyxe"]
 
+[ext_resource type="Script" uid="uid://ebxttdjlgous" path="res://scripts/Scholar.gd" id="1_hj4j3"]
 [ext_resource type="Texture2D" uid="uid://b670e0bdmgote" path="res://assets/scholar_walk (1).png" id="2_hj4j3"]
 [ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="2_qyqna"]
 
@@ -112,6 +113,8 @@ scale_min = 2.0
 scale_max = 4.0
 
 [node name="Scholar" type="CharacterBody2D" unique_id=795273243]
+script = ExtResource("1_hj4j3")
+SPEED = 300.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206561506]
 position = Vector2(3.5762787e-06, -3.5762787e-06)
