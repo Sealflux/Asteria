@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Asteria"
-run/main_scene="uid://b4vsot8vbtu78"
+run/main_scene="uid://c4a486rnwi1ge"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://dwgwphat8ni11"
 

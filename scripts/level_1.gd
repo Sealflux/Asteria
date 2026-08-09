@@ -4,6 +4,7 @@ var Lantern_Spawn: PackedScene
 var Current_Survivor
 var DialogueBox
 var SelectSurvivor
+var CurrentSurvivor
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(11):
@@ -13,7 +14,6 @@ func _ready() -> void:
 			var trap_node = get_node(node_path)
 			trap_node.survivor_died.connect(_on_survivor_died)
 			trap_node.spawn_survivor.connect(_spawn_Survivor)
-
 func _spawn_Survivor():
 	SelectSurvivor = preload("res://scenes/Selector.tscn")
 	if has_node("Selector") == null:

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://3ra7dc2ae2wv" path="res://assets/navigator_walking (1).png" id="4_d74e5"]
 [ext_resource type="Texture2D" uid="uid://dhf8vc5pdhvsn" path="res://assets/trapmaster.png" id="5_pvkvw"]
 [ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="6_op8ai"]
+[ext_resource type="Texture2D" uid="uid://b670e0bdmgote" path="res://assets/scholar_walk (1).png" id="8_6m2td"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8a7m2"]
 bg_color = Color(0, 0, 0, 1)
@@ -265,53 +266,48 @@ animations = [{
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ntmo"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywftf"]
-atlas = ExtResource("3_aj0ny")
+[sub_resource type="AtlasTexture" id="AtlasTexture_trwl0"]
+atlas = ExtResource("6_op8ai")
 region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywftf"]
+atlas = ExtResource("6_op8ai")
+region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mny78"]
-atlas = ExtResource("3_aj0ny")
-region = Rect2(128, 0, 128, 128)
+atlas = ExtResource("6_op8ai")
+region = Rect2(0, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8og8w"]
-atlas = ExtResource("3_aj0ny")
-region = Rect2(0, 128, 128, 128)
+atlas = ExtResource("6_op8ai")
+region = Rect2(128, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkska"]
-atlas = ExtResource("3_aj0ny")
-region = Rect2(128, 128, 128, 128)
+atlas = ExtResource("6_op8ai")
+region = Rect2(0, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2kyno"]
-atlas = ExtResource("3_aj0ny")
-region = Rect2(0, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhdjm"]
-atlas = ExtResource("3_aj0ny")
-region = Rect2(128, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hj4j3"]
-atlas = ExtResource("6_op8ai")
+atlas = ExtResource("8_6m2td")
 region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fma43"]
-atlas = ExtResource("6_op8ai")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhdjm"]
+atlas = ExtResource("8_6m2td")
 region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k7hqv"]
-atlas = ExtResource("6_op8ai")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggq4x"]
+atlas = ExtResource("8_6m2td")
 region = Rect2(0, 128, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uvusm"]
-atlas = ExtResource("6_op8ai")
+[sub_resource type="AtlasTexture" id="AtlasTexture_22kpn"]
+atlas = ExtResource("8_6m2td")
 region = Rect2(128, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r4fqi"]
-atlas = ExtResource("6_op8ai")
-region = Rect2(0, 256, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ggq4x"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trwl0")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ywftf")
 }, {
@@ -323,12 +319,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hkska")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2kyno")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vhdjm")
 }],
 "loop": 1,
 "name": &"idle",
@@ -336,26 +326,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hj4j3")
+"texture": SubResource("AtlasTexture_2kyno")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fma43")
+"texture": SubResource("AtlasTexture_vhdjm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k7hqv")
+"texture": SubResource("AtlasTexture_ggq4x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uvusm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r4fqi")
+"texture": SubResource("AtlasTexture_22kpn")
 }],
 "loop": 1,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=435881065]
+[node name="Selector" type="CanvasLayer" unique_id=435881065]
 
 [node name="Control" type="Control" parent="." unique_id=663910764]
 layout_mode = 3
@@ -445,7 +432,8 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "Some kind of ability to reveal walls so constantly bumping into walls isn't as frustrating"
+text = "Some kind of ability to reveal walls so constantly bumping into walls isn't as frustrating
+(Please choose this for first level as its hard)"
 autowrap_mode = 3
 
 [node name="ClassAmount" type="Label" parent="Control/HBoxContainer/NavigatorBox/PanelContainer/VBoxContainer" unique_id=1926091344]
@@ -491,7 +479,8 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "Reveals a random trap on the map at the start of each round"
+text = "Reveals a random trap on the map at the start of each round
+(Dubious Implementation)"
 autowrap_mode = 3
 
 [node name="ClassAmount" type="Label" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer/VBoxContainer" unique_id=1758817018]
@@ -537,7 +526,8 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "Ability to decipher symbols, signs and tracks that reveal information about the map."
+text = "Ability to decipher symbols, signs and tracks that reveal information about the map.
+(Not Implemented, no time)"
 autowrap_mode = 3
 
 [node name="ClassAmount" type="Label" parent="Control/HBoxContainer/ScholarBox/PanelContainer/VBoxContainer" unique_id=518612303]
@@ -561,9 +551,12 @@ animation = &"walk"
 [connection signal="gui_input" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_gui_input"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_entered"]
 [connection signal="mouse_exited" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_exited"]
+[connection signal="gui_input" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_gui_input"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_mouse_entered"]
 [connection signal="mouse_exited" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_mouse_exited"]
+[connection signal="gui_input" from="Control/HBoxContainer/TrapmasterBox" to="Control" method="_on_trapmaster_box_gui_input"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/TrapmasterBox" to="Control" method="_on_trapmaster_box_mouse_entered"]
 [connection signal="mouse_exited" from="Control/HBoxContainer/TrapmasterBox" to="Control" method="_on_trapmaster_box_mouse_exited"]
+[connection signal="gui_input" from="Control/HBoxContainer/ScholarBox" to="Control" method="_on_scholar_box_gui_input"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/ScholarBox" to="Control" method="_on_scholar_box_mouse_entered"]
 [connection signal="mouse_exited" from="Control/HBoxContainer/ScholarBox" to="Control" method="_on_scholar_box_mouse_exited"]

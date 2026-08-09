@@ -94,6 +94,7 @@ func _physics_process(delta: float) -> void:
 			if is_instance_valid(source["particles"]):
 				_emit_reveal_particles_for_source(source["get_pos"].call(), source["particles"], _accumulated_time)
 		_accumulated_time = 0.0
+	_find_target_and_particles()
 
 func _emit_reveal_particles_for_source(source_global_pos: Vector2, particles: GPUParticles2D, delta_step: float) -> void:
 	var tile_size: Vector2 = Vector2(tile_set.tile_size)
