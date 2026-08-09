@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dhf8vc5pdhvsn" path="res://assets/trapmaster.png" id="5_pvkvw"]
 [ext_resource type="Texture2D" uid="uid://dmcyh3eti23o0" path="res://assets/scholar (1).png" id="6_op8ai"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op8ai"]
+bg_color = Color(0.60079145, 0.6003641, 0.59227294, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("1_0rn1r")
 region = Rect2(0, 0, 128, 128)
@@ -359,138 +362,191 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer" unique_id=465513484]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer" unique_id=470145062]
-sprite_frames = SubResource("SpriteFrames_aj0ny")
-animation = &"idle"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=463737236]
+[node name="LeaderBox" type="BoxContainer" parent="Control/HBoxContainer" unique_id=1672118930]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
 
-[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=574936670]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/LeaderBox" unique_id=465513484]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/LeaderBox/PanelContainer" unique_id=463737236]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/LeaderBox/PanelContainer/VBoxContainer" unique_id=574936670]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "Leader"
 autowrap_mode = 3
 
-[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=1943503764]
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/LeaderBox/PanelContainer/VBoxContainer" unique_id=1943503764]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
+size_flags_vertical = 6
 text = "Ability to recruit one additional survivor after each level."
 autowrap_mode = 3
 
-[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=616594565]
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/LeaderBox/PanelContainer/VBoxContainer" unique_id=616594565]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 0
+size_flags_vertical = 6
 text = "Remaining: 1"
 autowrap_mode = 3
 
-[node name="PanelContainer2" type="PanelContainer" parent="Control/HBoxContainer" unique_id=1942749186]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/LeaderBox/PanelContainer" unique_id=1321917840]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer2" unique_id=1246878421]
-sprite_frames = SubResource("SpriteFrames_4cl8a")
-animation = &"walk"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/LeaderBox/PanelContainer/PanelContainer" unique_id=655134391]
+sprite_frames = SubResource("SpriteFrames_aj0ny")
+animation = &"idle"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=285452994]
+[node name="NavigatorBox" type="BoxContainer" parent="Control/HBoxContainer" unique_id=79794253]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
 
-[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=370794186]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/NavigatorBox" unique_id=1094056576]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/NavigatorBox/PanelContainer" unique_id=802163123]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/NavigatorBox/PanelContainer/VBoxContainer" unique_id=370794186]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
 text = "Navigator"
 autowrap_mode = 3
 
-[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=611692891]
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/NavigatorBox/PanelContainer/VBoxContainer" unique_id=611692891]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
+size_flags_vertical = 6
 text = "Some kind of ability to reveal walls so constantly bumping into walls isn't as frustrating"
 autowrap_mode = 3
 
-[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=1926091344]
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/NavigatorBox/PanelContainer/VBoxContainer" unique_id=1926091344]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 0
+size_flags_vertical = 6
 text = "Remaining: 1"
 autowrap_mode = 3
 
-[node name="PanelContainer3" type="PanelContainer" parent="Control/HBoxContainer" unique_id=1822573112]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/NavigatorBox/PanelContainer" unique_id=152946561]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer3" unique_id=664343489]
-sprite_frames = SubResource("SpriteFrames_trwl0")
-animation = &"idle"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HBoxContainer/NavigatorBox/PanelContainer/PanelContainer" unique_id=1246878421]
+sprite_frames = SubResource("SpriteFrames_4cl8a")
+animation = &"walk"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1758342315]
+[node name="TrapmasterBox" type="BoxContainer" parent="Control/HBoxContainer" unique_id=511751278]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
 
-[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer3" unique_id=1237479482]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/TrapmasterBox" unique_id=1700522384]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer" unique_id=724728281]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer/VBoxContainer" unique_id=612630466]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 text = "Trapmaster"
 autowrap_mode = 3
 
-[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer3" unique_id=208869064]
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer/VBoxContainer" unique_id=44378597]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
+size_flags_vertical = 6
 text = "Reveals a random trap on the map at the start of each round"
 autowrap_mode = 3
 
-[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer3" unique_id=410162198]
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer/VBoxContainer" unique_id=1758817018]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 0
+size_flags_vertical = 6
 text = "Remaining: 1"
 autowrap_mode = 3
 
-[node name="PanelContainer4" type="PanelContainer" parent="Control/HBoxContainer" unique_id=120755805]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer" unique_id=1149823792]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/HBoxContainer/PanelContainer4" unique_id=51495674]
-sprite_frames = SubResource("SpriteFrames_ggq4x")
-animation = &"walk"
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/HBoxContainer/TrapmasterBox/PanelContainer/PanelContainer" unique_id=998096768]
+sprite_frames = SubResource("SpriteFrames_trwl0")
+animation = &"idle"
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1464845944]
+[node name="ScholarBox" type="BoxContainer" parent="Control/HBoxContainer" unique_id=1320871315]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
 
-[node name="ClassName" type="Label" parent="Control/HBoxContainer/VBoxContainer4" unique_id=1532251177]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/ScholarBox" unique_id=651764540]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Scholar"
-autowrap_mode = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
 
-[node name="ClassRole" type="Label" parent="Control/HBoxContainer/VBoxContainer4" unique_id=1655818437]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/ScholarBox/PanelContainer" unique_id=33677181]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Ability to decipher symbols, signs and tracks that reveal information about the map."
-autowrap_mode = 3
 
-[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/VBoxContainer4" unique_id=1105115420]
+[node name="ClassName" type="Label" parent="Control/HBoxContainer/ScholarBox/PanelContainer/VBoxContainer" unique_id=473987300]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
+text = "Scholar"
+autowrap_mode = 3
+
+[node name="ClassRole" type="Label" parent="Control/HBoxContainer/ScholarBox/PanelContainer/VBoxContainer" unique_id=410271968]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Ability to decipher symbols, signs and tracks that reveal information about the map."
+autowrap_mode = 3
+
+[node name="ClassAmount" type="Label" parent="Control/HBoxContainer/ScholarBox/PanelContainer/VBoxContainer" unique_id=518612303]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
 text = "Remaining: 1"
 autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/ScholarBox/PanelContainer" unique_id=153695478]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_op8ai")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/HBoxContainer/ScholarBox/PanelContainer/PanelContainer" unique_id=1433904874]
+sprite_frames = SubResource("SpriteFrames_ggq4x")
+animation = &"walk"
+
+[connection signal="mouse_entered" from="Control/HBoxContainer/LeaderBox" to="Control" method="_on_leader_box_mouse_entered"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/NavigatorBox" to="Control" method="_on_navigator_box_mouse_entered"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/TrapmasterBox" to="Control" method="_on_trapmaster_box_mouse_entered"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/ScholarBox" to="Control" method="_on_scholar_box_mouse_entered"]
