@@ -29,8 +29,11 @@ func _ready() -> void:
 	var Trap8 = get_node("SimpleTrap8")
 	Trap8.survivor_died.connect(_on_survivor_died)
 	Trap8.spawn_survivor.connect(_spawn_Survivor)
+	var Trap9 = get_node("SimpleTrap9")
+	Trap9.survivor_died.connect(_on_survivor_died)
+	Trap9.spawn_survivor.connect(_spawn_Survivor)
 
-func _spawn_Survivor(survivor : int, position: Vector2):
+func _spawn_Survivor(survivor : int, positioncoords: Vector2):
 	# 2. Instantiate the scene
 	if survivor == 1:
 		Survivor_Spawn = preload("res://scenes/Leader.tscn")
@@ -41,20 +44,21 @@ func _spawn_Survivor(survivor : int, position: Vector2):
 	#if survivor == 4:
 	#	Survivor_Spawn = preload("res://scenes/Scholar.tscn")
 	var CurrentSurvivor = Survivor_Spawn.instantiate()
-	CurrentSurvivor.position = position
+	CurrentSurvivor.position = positioncoords
 	add_child(CurrentSurvivor)
 func _on_survivor_died(Survivor) -> void:
 	print("Death")
 	Survivor.queue_free()
 	spawn_Lantern(Survivor.position)
 	ShowDialogue()
+	print("Play Dialogue")
 func ShowDialogue():
 	DialogueBox = preload("res://scenes/SelfTalk.tscn")
 	var NewDialogueBox = DialogueBox.instantiate()
 	add_child(NewDialogueBox)
 
-func spawn_Lantern(position: Vector2):
+func spawn_Lantern(positioncoords: Vector2):
 	Lantern_Spawn = preload("res://scenes/Lantern.tscn")
 	var NewLantern = Lantern_Spawn.instantiate()
-	NewLantern.position = position
+	NewLantern.position = positioncoords
 	add_child(NewLantern)

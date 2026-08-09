@@ -10,7 +10,7 @@ var base_size : Vector2
 var dialogue_data = [
 	{
 		"speaker": "Placeholder",
-		"text": "Tung",
+		"text": "Tung Tung Tung Sahur",
 		"next_id": 1
 	},
 	{
@@ -37,25 +37,30 @@ func _ready():
 	print(dialogue_data[1].text)
 	print(dialogue_data[1].next_id)
 	
-func set_text_and_start(new_text: String):
-	set_text(new_text)
-	
-func set_text(new_text: String):
-	label.text = new_text
-	label.visible_ratio = 0.0
+func type_text(new_text: String):
 	var tween = create_tween()
-	textcount = label.text.length()
-	duration = 1 + 0.05 * textcount
-	tween.tween_property(label, "visible_ratio", 1.0, duration).from(0.0)
+	label.text = new_text
+	# Calculate time based on length for consistent speed (e.g., 0.05s per char)
+	var time = new_text.length() * 0.05
+	tween.tween_property(label, "visible_characters", new_text.length(), time)
+	tween.tween_interval(0.05) # Pause before repeating or ending
+	play_sound("res://assets/sans.wav")
+	tween.tween_property(label, "visible_characters", 0, 0.2) # Optional: fade out to repeat   
+
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		if (dialogueline < dialogue_data.size()):
-			set_text_size()
-			set_text_and_start(dialogue_data[dialogueline].text)
+			type_text(dialogue_data[dialogueline].text)
 			$HSplitContainer/PanelContainer/AnimatedSprite2D.play("idle")
 			dialogueline += 1
 			
+@onready var audio_player = $AudioStreamPlayer2D
+
+func play_sound(path):
+	audio_player.stream = load(path)
+	audio_player.play()   
+
 
 func set_text_size():
 	var new_size = $".".size

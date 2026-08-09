@@ -1,77 +1,15 @@
 [gd_scene format=4 uid="uid://i4y8y7kk05vr"]
 
 [ext_resource type="PackedScene" uid="uid://cjg6tuwdqg60n" path="res://scenes/tile_map_layer.tscn" id="1_5kldx"]
+[ext_resource type="Script" uid="uid://msx30w4xbmdw" path="res://scripts/map_2.gd" id="1_rtqf6"]
 [ext_resource type="PackedScene" uid="uid://e8i4d4wx30uk" path="res://scenes/tilemaplayer_2.tscn" id="2_rtqf6"]
 [ext_resource type="PackedScene" uid="uid://2nk6y0ob2nk" path="res://scenes/Leader.tscn" id="3_u6ti8"]
 [ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="4_rutqx"]
 
-[sub_resource type="GDScript" id="GDScript_5kldx"]
-script/source = "extends Node2D
-var Survivor_Spawn: PackedScene
-var Lantern_Spawn: PackedScene
-var Current_Survivor
-var DialogueBox
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var Trap = get_node(\"SimpleTrap\")
-	Trap.survivor_died.connect(_on_survivor_died)
-	Trap.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap2 = get_node(\"SimpleTrap2\")
-	Trap2.survivor_died.connect(_on_survivor_died)
-	Trap2.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap3 = get_node(\"SimpleTrap3\")
-	Trap3.survivor_died.connect(_on_survivor_died)
-	Trap3.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap4 = get_node(\"SimpleTrap4\")
-	Trap4.survivor_died.connect(_on_survivor_died)
-	Trap4.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap5 = get_node(\"SimpleTrap5\")
-	Trap5.survivor_died.connect(_on_survivor_died)
-	Trap5.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap6 = get_node(\"SimpleTrap6\")
-	Trap6.survivor_died.connect(_on_survivor_died)
-	Trap6.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap7 = get_node(\"SimpleTrap7\")
-	Trap7.survivor_died.connect(_on_survivor_died)
-	Trap7.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-	var Trap8 = get_node(\"SimpleTrap8\")
-	Trap8.survivor_died.connect(_on_survivor_died)
-	Trap8.spawn_survivor.connect(_spawn_Survivor, CONNECT_DEFERRED)
-
-func _spawn_Survivor(survivor : int, position: Vector2):
-	# 2. Instantiate the scene
-	if survivor == 1:
-		Survivor_Spawn = preload(\"res://scenes/Leader.tscn\")
-	#if survivor == 2:
-	#	Survivor_Spawn = preload(\"res://scenes/Trapmaster.tscn\")
-	#if survivor == 3:
-	#	Survivor_Spawn = preload(\"res://scenes/Navigator.tscn\")
-	#if survivor == 4:
-	#	Survivor_Spawn = preload(\"res://scenes/Scholar.tscn\")
-	var CurrentSurvivor = Survivor_Spawn.instantiate()
-	add_child(CurrentSurvivor)
-	CurrentSurvivor.position = position
-func _on_survivor_died(Survivor) -> void:
-	print(\"Death\")
-	Survivor.queue_free()
-	spawn_Lantern(Survivor.position)
-func ShowDialogue(position: Vector2):
-	DialogueBox = preload(\"res://scenes/SelfTalk.tscn\")
-	var NewDialogueBox = DialogueBox.instantiate()
-	NewDialogueBox.position = Vector2(0,0)
-	add_child(NewDialogueBox)
-
-func spawn_Lantern(position: Vector2):
-	Lantern_Spawn = preload(\"res://scenes/Lantern.tscn\")
-	var NewLantern = Lantern_Spawn.instantiate()
-	NewLantern.position = position
-	add_child(NewLantern)
-"
-
 [node name="Map" type="Node2D" unique_id=374711144]
-script = SubResource("GDScript_5kldx")
+script = ExtResource("1_rtqf6")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1360810343]
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1360810343]
 visible = false
 color = Color(0, 0, 0, 1)
 
@@ -121,4 +59,9 @@ scale = Vector2(1, 1)
 [node name="SimpleTrap8" parent="." unique_id=1757290505 instance=ExtResource("4_rutqx")]
 visible = false
 position = Vector2(406, 472)
+scale = Vector2(1, 1)
+
+[node name="SimpleTrap9" parent="." unique_id=1989656060 instance=ExtResource("4_rutqx")]
+visible = false
+position = Vector2(-615, -615)
 scale = Vector2(1, 1)
