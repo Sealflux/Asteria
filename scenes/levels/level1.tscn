@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://0bgrsy8nih8w" path="res://scripts/navigator_wall.gd" id="2_dd0lh"]
 [ext_resource type="PackedScene" uid="uid://dahh6rxr1viwj" path="res://scenes/Navigator.tscn" id="3_dd0lh"]
 [ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="4_bfxgj"]
+[ext_resource type="PackedScene" uid="uid://p2qvefaepper" path="res://scenes/Selector.tscn" id="6_1seuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfxgj"]
 texture = ExtResource("1_4tcl0")
@@ -570,3 +571,6 @@ scale = Vector2(3, 3)
 visible = false
 position = Vector2(-306, 137)
 scale = Vector2(3, 3)
+
+[node name="Selector" parent="." unique_id=435881065 instance=ExtResource("6_1seuy")]
+visible = false
