@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c4a486rnwi1ge"]
 
+[ext_resource type="Script" uid="uid://bkujx620g8u5x" path="res://scripts/intro.gd" id="1_g036g"]
 [ext_resource type="PackedScene" uid="uid://2nk6y0ob2nk" path="res://scenes/Leader.tscn" id="2_6csdh"]
 [ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="2_egpjd"]
+[ext_resource type="PackedScene" uid="uid://b4vsot8vbtu78" path="res://scenes/levels/level1.tscn" id="2_pil6x"]
 [ext_resource type="PackedScene" uid="uid://cjg6tuwdqg60n" path="res://scenes/tile_map_layer.tscn" id="3_ty81x"]
 [ext_resource type="PackedScene" uid="uid://e8i4d4wx30uk" path="res://scenes/tilemaplayer_2.tscn" id="4_p8wlm"]
 [ext_resource type="Texture2D" uid="uid://dclkqxd51x5au" path="res://scenes/keyboard_c.svg" id="5_ty81x"]
@@ -11,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://vqmoamav1u2c" path="res://scenes/keyboard_a.png" id="9_pil6x"]
 
 [node name="Intro" type="Node2D" unique_id=1801399948]
+script = ExtResource("1_g036g")
+target_scene = ExtResource("2_pil6x")
 
 [node name="FloorTileMapLayer" parent="." unique_id=27572512 instance=ExtResource("3_ty81x")]
 
