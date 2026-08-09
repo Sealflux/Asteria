@@ -29,6 +29,9 @@ func _ready() -> void:
 	var Trap8 = get_node("SimpleTrap8")
 	Trap8.survivor_died.connect(_on_survivor_died)
 	Trap8.spawn_survivor.connect(_spawn_Survivor)
+	var Trap9 = get_node("SimpleTrap9")
+	Trap9.survivor_died.connect(_on_survivor_died)
+	Trap9.spawn_survivor.connect(_spawn_Survivor)
 
 func _spawn_Survivor(survivor : int, positioncoords: Vector2):
 	# 2. Instantiate the scene

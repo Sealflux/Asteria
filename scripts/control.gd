@@ -45,7 +45,7 @@ func set_text(new_text: String):
 	label.visible_ratio = 0.0
 	var tween = create_tween()
 	textcount = label.text.length()
-	duration = 1 + 0.05 * textcount
+	duration = 0.75 + 0.05 * textcount
 	tween.tween_property(label, "visible_ratio", 1.0, duration).from(0.0)
 
 func _on_gui_input(event: InputEvent) -> void:

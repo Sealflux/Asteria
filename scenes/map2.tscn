@@ -9,7 +9,7 @@
 [node name="Map" type="Node2D" unique_id=374711144]
 script = ExtResource("1_rtqf6")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1360810343]
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1360810343]
 visible = false
 color = Color(0, 0, 0, 1)
 
@@ -59,4 +59,9 @@ scale = Vector2(1, 1)
 [node name="SimpleTrap8" parent="." unique_id=1757290505 instance=ExtResource("4_rutqx")]
 visible = false
 position = Vector2(406, 472)
+scale = Vector2(1, 1)
+
+[node name="SimpleTrap9" parent="." unique_id=1989656060 instance=ExtResource("4_rutqx")]
+visible = false
+position = Vector2(-615, -615)
 scale = Vector2(1, 1)
