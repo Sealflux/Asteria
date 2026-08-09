@@ -49,7 +49,7 @@ func _on_survivor_died(Survivor) -> void:
 	spawn_Lantern(Survivor.position)
 	ShowDialogue()
 func ShowDialogue():
-	DialogueBox = preload("res://scenes/Dialogue.tscn")
+	DialogueBox = preload("res://scenes/SelfTalk.tscn")
 	var NewDialogueBox = DialogueBox.instantiate()
 	add_child(NewDialogueBox)
 
