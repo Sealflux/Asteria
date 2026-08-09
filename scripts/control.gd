@@ -11,24 +11,31 @@ var dialoguebox: CanvasLayer
 var dialogue_data = [
 	{
 		"speaker": "Placeholder",
-		"text": "So the story will take place on a campground site, in the forest. It will be dark, and the player plays as a group of survivors. Each level you will start with a certain number of survivors. You will be dying to traps in a maze, with invisible walls. You are able to see the floor near you with your small lantern range, but no walls. Traps may or may not be hidden, but when the survivor triggers a trap, their lantern spills and lights up the walls/traps next is a greater radius. Then you play as the next survivor, but remember the number of available survivors is limited.",
+		"text": "So the story will take place on a campground site, in the forest. It will be dark, and the player plays as a group of survivors.",
 		"next_id": 1
 	},
 	{
 		"speaker": "Placeholder",
-		"text": "Tung",
+		"text": "Each level you will start with a certain number of survivors. You will be dying to traps in a maze, with invisible walls. ",
 		"next_id": 2
 	},
 	{
 		"speaker": "Placeholder",
-		"text": "Tung",
+		"text": "You are able to see the floor near you with your small lantern range, but no walls.",
 		"next_id": 3
 	},
 	{
 		"speaker": "Placeholder",
-		"text": "Sahurrrr",
+		"text": "Traps may or may not be hidden, but when the survivor triggers a trap, their lantern spills and lights up the walls/traps next is a greater radius.",
 		"next_id": 4
 	}
+	,
+	{
+		"speaker": "Placeholder",
+		"text": "Then you play as the next survivor, but remember the number of available survivors is limited.",
+		"next_id": 5
+	}
+	,
 ]   
 func _ready():
 	label = $HBoxContainer/Label
