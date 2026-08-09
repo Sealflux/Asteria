@@ -3,6 +3,7 @@ var Survivor_Spawn: PackedScene
 var Lantern_Spawn: PackedScene
 var Current_Survivor
 var DialogueBox
+var SelectSurvivor
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var Trap = get_node("SimpleTrap")
@@ -28,24 +29,16 @@ func _ready() -> void:
 	Trap7.spawn_survivor.connect(_spawn_Survivor)
 	var Trap8 = get_node("SimpleTrap8")
 	Trap8.survivor_died.connect(_on_survivor_died)
-	Trap8.spawn_survivor.connect(_spawn_Survivor)
+	Trap8.spawn_survivor.aconnect(_spawn_Survivor)
 	var Trap9 = get_node("SimpleTrap9")
 	Trap9.survivor_died.connect(_on_survivor_died)
 	Trap9.spawn_survivor.connect(_spawn_Survivor)
+	
 
-func _spawn_Survivor(survivor : int, positioncoords: Vector2):
-	# 2. Instantiate the scene
-	if survivor == 1:
-		Survivor_Spawn = preload("res://scenes/Leader.tscn")
-	#if survivor == 2:
-	#	Survivor_Spawn = preload("res://scenes/Trapmaster.tscn")
-	#if survivor == 3:
-	#	Survivor_Spawn = preload("res://scenes/Navigator.tscn")
-	#if survivor == 4:
-	#	Survivor_Spawn = preload("res://scenes/Scholar.tscn")
-	var CurrentSurvivor = Survivor_Spawn.instantiate()
-	CurrentSurvivor.position = positioncoords
-	add_child(CurrentSurvivor)
+func _spawn_Survivor():
+	SelectSurvivor = preload("res://scenes/Selector.tscn")
+	var NewSelectScreen = SelectSurvivor.instantiate()
+	add_child(NewSelectScreen)
 func _on_survivor_died(Survivor) -> void:
 	print("Death")
 	Survivor.queue_free()
