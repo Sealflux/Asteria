@@ -115,23 +115,42 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_c5dbn")
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2054584588]
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=525996807]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -313.0
-offset_bottom = 144.0
+offset_left = 54.0
+offset_top = 295.0
+offset_right = -224.0
+offset_bottom = 135.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 texture = ExtResource("2_b7h3t")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2054584588]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 596.0
+offset_top = 294.0
+offset_right = 318.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b7h3t")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="HSplitContainer" type="HSplitContainer" parent="Control" unique_id=167567807]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.69753087
-anchor_right = 1.0
+anchor_left = 0.081597224
+anchor_top = 0.6481481
+anchor_right = 0.984375
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -142,8 +161,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/HSplitContainer/PanelContainer" unique_id=756989077]
-position = Vector2(159, 99.00001)
-scale = Vector2(1.9, 1.587)
+position = Vector2(218.00002, 98.216)
+scale = Vector2(1.9, 1.5435)
 sprite_frames = SubResource("SpriteFrames_7f5y4")
 animation = &"idle"
 frame = 5
