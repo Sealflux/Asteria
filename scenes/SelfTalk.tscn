@@ -120,6 +120,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_c5dbn")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control" unique_id=251691774]
+position = Vector2(415, 419.99997)
+
 [node name="TextureRect2" type="TextureRect" parent="Control" unique_id=525996807]
 layout_mode = 1
 anchors_preset = 15
@@ -179,6 +182,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Placeholder"
 script = SubResource("GDScript_y6djt")
+
+[node name="Timer" type="Timer" parent="Control/HSplitContainer/Label" unique_id=1286754363]
+wait_time = 0.05
 
 [connection signal="gui_input" from="Control" to="Control" method="_on_gui_input"]
 [connection signal="tree_entered" from="Control" to="Control" method="_on_tree_entered"]
