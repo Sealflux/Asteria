@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c4a486rnwi1ge"]
+
+[ext_resource type="PackedScene" uid="uid://2nk6y0ob2nk" path="res://scenes/Leader.tscn" id="2_6csdh"]
+[ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="2_egpjd"]
+[ext_resource type="PackedScene" uid="uid://cjg6tuwdqg60n" path="res://scenes/tile_map_layer.tscn" id="3_ty81x"]
+[ext_resource type="PackedScene" uid="uid://e8i4d4wx30uk" path="res://scenes/tilemaplayer_2.tscn" id="4_p8wlm"]
+
+[node name="Intro" type="Node2D" unique_id=1801399948]
+
+[node name="FloorTileMapLayer" parent="." unique_id=27572512 instance=ExtResource("3_ty81x")]
+
+[node name="ObjectTileMapLayer" parent="." unique_id=704384601 instance=ExtResource("4_p8wlm")]
+
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1060356026]
+color = Color(0, 0, 0, 1)
+
+[node name="Leader" parent="." unique_id=438301327 instance=ExtResource("2_6csdh")]
+
+[node name="SimpleTrap" parent="." unique_id=1179496802 instance=ExtResource("2_egpjd")]
+visible = false
+position = Vector2(-295, 215)
+scale = Vector2(1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=101616676]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=865201250]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1148528120]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
