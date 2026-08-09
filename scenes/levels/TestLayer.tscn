@@ -1,10 +1,8 @@
 [gd_scene format=4 uid="uid://p0fi3248enr1"]
 
-[ext_resource type="Script" uid="uid://drw1hn7yej86y" path="res://scenes/levels/navigator.gd" id="2_qphgw"]
-[ext_resource type="Script" uid="uid://0bgrsy8nih8w" path="res://scenes/levels/navigator_wall.gd" id="2_w8tit"]
+[ext_resource type="Script" uid="uid://0bgrsy8nih8w" path="res://scripts/navigator_wall.gd" id="2_w8tit"]
+[ext_resource type="PackedScene" uid="uid://dahh6rxr1viwj" path="res://scenes/Navigator.tscn" id="3_puoix"]
 [ext_resource type="Texture2D" uid="uid://dfgx4cpnen1s0" path="res://assets/asteria_tilemap.png" id="3_qphgw"]
-[ext_resource type="Texture2D" uid="uid://cwapxtp4qm8cy" path="res://assets/Starseeker_Idle_horizontal.png" id="3_w8tit"]
-[ext_resource type="Texture2D" uid="uid://cfftc7d6jeedx" path="res://assets/Starseeker_walk_horizontal.png" id="4_1dhnq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0l776"]
 texture = ExtResource("3_qphgw")
@@ -491,121 +489,6 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0l776")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
-atlas = ExtResource("3_w8tit")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("3_w8tit")
-region = Rect2(128, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = ExtResource("3_w8tit")
-region = Rect2(0, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("3_w8tit")
-region = Rect2(128, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = ExtResource("3_w8tit")
-region = Rect2(0, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
-atlas = ExtResource("3_w8tit")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
-atlas = ExtResource("4_1dhnq")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
-atlas = ExtResource("4_1dhnq")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
-atlas = ExtResource("4_1dhnq")
-region = Rect2(0, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
-atlas = ExtResource("4_1dhnq")
-region = Rect2(128, 128, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dc35q"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dqkch")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qlg0r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fjrip")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_smehm")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 7.5
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ur7pv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y4r1p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d2wvv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3v2ag")
-}],
-"loop": 1,
-"name": &"walk",
-"speed": 7.5
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2k30l"]
-radius = 15.0
-height = 56.0
-
-[sub_resource type="Gradient" id="Gradient_g2els"]
-offsets = PackedFloat32Array(0, 0.54086536, 0.9206731)
-colors = PackedColorArray(0.784375, 0.8989258, 1, 1, 0.78431374, 0.8980392, 1, 0.19607843, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_x102p"]
-gradient = SubResource("Gradient_g2els")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xrivr"]
-blend_mode = 1
-light_mode = 1
-
-[sub_resource type="Gradient" id="Gradient_w8tit"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_13qdw"]
-gradient = SubResource("Gradient_w8tit")
-width = 2
-height = 2
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ojxlk"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
-scale_min = 2.0
-scale_max = 4.0
-
 [sub_resource type="Environment" id="Environment_xrivr"]
 glow_enabled = true
 
@@ -618,40 +501,13 @@ color = Color(0, 0, 0, 1)
 tile_map_data = PackedByteArray("AAD3//v/AAALAAIAAAD4//v/AAALAAIAAAD5//v/AAALAAIAAAD6//v/AAALAAIAAAD7//v/AAALAAIAAAD8//v/AAALAAIAAAD9//v/AAALAAIAAAD+//v/AAALAAIAAAD///v/AAALAAIAAAAAAPv/AAALAAIAAAABAPv/AAALAAIAAAACAPv/AAALAAIAAAADAPv/AAALAAIAAAAEAPv/AAALAAIAAAAFAPv/AAALAAIAAAAGAPv/AAALAAIAAAAHAPv/AAALAAIAAAAIAPv/AAALAAIAAAAIAPz/AAALAAIAAAAHAPz/AAALAAIAAAAGAPz/AAALAAIAAAAFAPz/AAALAAIAAAAEAPz/AAALAAIAAAADAPz/AAALAAIAAAACAPz/AAALAAIAAAABAPz/AAALAAIAAAAAAPz/AAALAAIAAAD///z/AAALAAIAAAD+//z/AAALAAIAAAD9//z/AAALAAIAAAD8//z/AAALAAIAAAD7//z/AAALAAIAAAD6//z/AAALAAIAAAD5//z/AAALAAIAAAD4//z/AAALAAIAAAD3//z/AAALAAIAAAD3//3/AAALAAIAAAD4//3/AAALAAIAAAD5//3/AAALAAIAAAD6//3/AAALAAIAAAD7//3/AAALAAIAAAD8//3/AAALAAIAAAD9//3/AAALAAIAAAD+//3/AAALAAIAAAD///3/AAALAAIAAAAAAP3/AAALAAIAAAABAP3/AAALAAIAAAACAP3/AAALAAIAAAADAP3/AAALAAIAAAAEAP3/AAALAAIAAAAFAP3/AAALAAIAAAAFAP7/AAALAAIAAAAGAP7/AAALAAIAAAAHAP3/AAALAAIAAAAIAP3/AAALAAIAAAAIAP7/AAALAAIAAAAHAP7/AAALAAIAAAAEAP7/AAALAAIAAAADAP7/AAALAAIAAAACAP7/AAALAAIAAAABAP7/AAALAAIAAAAAAP7/AAALAAIAAAD///7/AAALAAIAAAD+//7/AAALAAIAAAD9//7/AAALAAIAAAD8//7/AAALAAIAAAD7//7/AAALAAIAAAD6//7/AAALAAIAAAD5//7/AAALAAIAAAD4//7/AAALAAIAAAD3//7/AAALAAIAAAD3////AAALAAIAAAD4////AAALAAIAAAD5////AAALAAIAAAD6////AAALAAIAAAD7////AAALAAIAAAD8////AAALAAIAAAD9////AAALAAIAAAD+////AAALAAIAAAD/////AAALAAIAAAAAAP//AAALAAIAAAABAP//AAALAAIAAAACAP//AAALAAIAAAADAP//AAALAAIAAAAEAP//AAALAAIAAAAFAP//AAALAAIAAAAGAP//AAALAAIAAAAHAP//AAALAAIAAAAIAP//AAALAAIAAAAGAP3/AAALAAIAAAAIAAAAAAALAAIAAAAHAAAAAAALAAIAAAAGAAAAAAALAAIAAAAFAAAAAAALAAIAAAAEAAAAAAALAAIAAAADAAAAAAALAAIAAAACAAAAAAALAAIAAAABAAAAAAALAAIAAAAAAAAAAAALAAIAAAD//wAAAAALAAIAAAD+/wAAAAALAAIAAAD9/wAAAAALAAIAAAD8/wAAAAALAAIAAAD7/wAAAAALAAIAAAD6/wAAAAALAAIAAAD5/wAAAAALAAIAAAD4/wAAAAALAAIAAAD4/wEAAAALAAIAAAD3/wAAAAALAAIAAAD3/wEAAAALAAIAAAD5/wEAAAALAAIAAAD6/wEAAAALAAIAAAD7/wEAAAALAAIAAAD8/wEAAAALAAIAAAD9/wEAAAALAAIAAAD+/wEAAAALAAIAAAD//wEAAAALAAIAAAAAAAEAAAALAAIAAAABAAEAAAALAAIAAAACAAEAAAALAAIAAAADAAEAAAALAAIAAAAEAAEAAAALAAIAAAAFAAEAAAALAAIAAAAGAAEAAAALAAIAAAAHAAEAAAALAAIAAAAIAAEAAAALAAIAAAAIAAIAAAALAAIAAAAHAAIAAAALAAIAAAAGAAIAAAALAAIAAAAFAAIAAAALAAIAAAAEAAIAAAALAAIAAAADAAIAAAALAAIAAAACAAIAAAALAAIAAAABAAIAAAALAAIAAAAAAAIAAAALAAIAAAD//wIAAAALAAIAAAD+/wIAAAALAAIAAAD9/wIAAAALAAIAAAD8/wIAAAALAAIAAAD7/wIAAAALAAIAAAD6/wIAAAALAAIAAAD5/wIAAAALAAIAAAD4/wIAAAALAAIAAAD3/wIAAAALAAIAAAD3/wMAAAALAAIAAAD4/wMAAAALAAIAAAD5/wMAAAALAAIAAAD6/wMAAAALAAIAAAD7/wMAAAALAAIAAAD8/wMAAAALAAIAAAD9/wMAAAALAAIAAAD+/wMAAAALAAIAAAD//wMAAAALAAIAAAAAAAMAAAALAAIAAAABAAMAAAALAAIAAAACAAMAAAALAAIAAAADAAMAAAALAAIAAAAEAAMAAAALAAIAAAAFAAMAAAALAAIAAAAGAAMAAAALAAIAAAAHAAMAAAALAAIAAAAIAAMAAAALAAIAAAAIAAQAAAALAAIAAAAHAAQAAAALAAIAAAAGAAQAAAALAAIAAAAFAAQAAAALAAIAAAAEAAQAAAALAAIAAAADAAQAAAALAAIAAAACAAQAAAALAAIAAAABAAQAAAALAAIAAAAAAAQAAAALAAIAAAD//wQAAAALAAIAAAD+/wQAAAALAAIAAAD9/wQAAAALAAIAAAD8/wQAAAALAAIAAAD7/wQAAAALAAIAAAD6/wQAAAALAAIAAAD5/wQAAAALAAIAAAD4/wQAAAALAAIAAAD3/wQAAAALAAIAAAA=")
 tile_set = SubResource("TileSet_13qdw")
 
-[node name="WallTileMapLayer" type="TileMapLayer" parent="." unique_id=122173860 node_paths=PackedStringArray("player", "reveal_particles")]
+[node name="WallTileMapLayer" type="TileMapLayer" parent="." unique_id=122173860]
 visible = false
 tile_map_data = PackedByteArray("AAD7//7/AAAIAAEAAAD7////AAAIAAEAAAD7/wAAAAAIAAEAAAD8/wAAAAAIAAEAAAD9/wAAAAAIAAEAAAD9/wEAAAAIAAEAAAD9/wIAAAAIAAEAAAD+/wIAAAAIAAEAAAD//wIAAAAIAAEAAAAAAAIAAAAIAAEAAAD9////AAAIAAEAAAD9//7/AAAIAAEAAAD9//3/AAAIAAEAAAD+//3/AAAIAAEAAAD///3/AAAIAAEAAAAAAP3/AAAIAAEAAAABAP7/AAAIAAEAAAABAP3/AAAIAAEAAAABAPz/AAAIAAEAAAACAP3/AAAIAAEAAAAEAP3/AAAIAAEAAAAEAP7/AAAIAAEAAAAEAP//AAAIAAEAAAAEAAAAAAAIAAEAAAACAAAAAAAIAAEAAAADAAAAAAAIAAEAAAACAAIAAAAIAAEAAAADAAIAAAAIAAEAAAAEAAIAAAAIAAEAAAAFAAIAAAAIAAEAAAAGAAAAAAAIAAEAAAAGAAEAAAAIAAEAAAAGAAIAAAAIAAEAAAADAAMAAAAIAAEAAAADAAQAAAAIAAEAAAAAAAMAAAAIAAEAAAAEAAQAAAAIAAEAAAAFAAQAAAAIAAEAAAAGAAQAAAAIAAEAAAAHAAQAAAAIAAEAAAAIAAQAAAAIAAEAAAAIAAMAAAAIAAEAAAAIAAIAAAAIAAEAAAAIAAEAAAAIAAEAAAAIAAAAAAAIAAEAAAAIAP//AAAIAAEAAAAIAP7/AAAIAAEAAAAIAP3/AAAIAAEAAAAHAP3/AAAIAAEAAAAGAP3/AAAIAAEAAAAEAPv/AAAIAAEAAAAGAPv/AAAIAAEAAAAFAPv/AAAIAAEAAAAHAPv/AAAIAAEAAAAIAPv/AAAIAAEAAAA=")
 tile_set = SubResource("TileSet_13qdw")
 script = ExtResource("2_w8tit")
-player = NodePath("../Navigator")
-reveal_particles = NodePath("../Navigator/GPUParticles2D")
-
-[node name="Navigator" type="CharacterBody2D" parent="." unique_id=441381454]
-script = ExtResource("2_qphgw")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Navigator" unique_id=1029834916]
-position = Vector2(3.5762787e-06, -3.5762787e-06)
-scale = Vector2(0.75, 0.75)
-sprite_frames = SubResource("SpriteFrames_dc35q")
-animation = &"idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigator" unique_id=1701544157]
-shape = SubResource("CapsuleShape2D_2k30l")
-
-[node name="PointLight2D" type="PointLight2D" parent="Navigator" unique_id=1725247507]
-blend_mode = 2
-texture = SubResource("GradientTexture2D_x102p")
-texture_scale = 5.0
-
-[node name="Camera2D" type="Camera2D" parent="Navigator" unique_id=653570955]
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Navigator" unique_id=135348727]
-material = SubResource("CanvasItemMaterial_xrivr")
-emitting = false
-amount = 3000
-texture = SubResource("GradientTexture2D_13qdw")
-lifetime = 0.8
-process_material = SubResource("ParticleProcessMaterial_ojxlk")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=581748100]
 environment = SubResource("Environment_xrivr")
+
+[node name="Navigator" parent="." unique_id=795273243 instance=ExtResource("3_puoix")]

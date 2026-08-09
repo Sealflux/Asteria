@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://dahh6rxr1viwj"]
+
+[ext_resource type="Script" uid="uid://drw1hn7yej86y" path="res://scripts/navigator.gd" id="1_eggc8"]
+[ext_resource type="Texture2D" uid="uid://cwapxtp4qm8cy" path="res://assets/Starseeker_Idle_horizontal.png" id="1_yh2ir"]
+[ext_resource type="Texture2D" uid="uid://cfftc7d6jeedx" path="res://assets/Starseeker_walk_horizontal.png" id="2_eggc8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("1_yh2ir")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("1_yh2ir")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("1_yh2ir")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("1_yh2ir")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("1_yh2ir")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("1_yh2ir")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_eggc8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("2_eggc8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("2_eggc8")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("2_eggc8")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6k5vl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 7.5
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hag2f"]
+radius = 15.0
+height = 56.0
+
+[sub_resource type="Gradient" id="Gradient_g2els"]
+offsets = PackedFloat32Array(0, 0.54086536, 0.9206731)
+colors = PackedColorArray(0.784375, 0.8989258, 1, 1, 0.78431374, 0.8980392, 1, 0.19607843, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wjt4n"]
+gradient = SubResource("Gradient_g2els")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hoywy"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_w8tit"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_51v06"]
+gradient = SubResource("Gradient_w8tit")
+width = 2
+height = 2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rbnvw"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 4.0
+
+[node name="Navigator" type="CharacterBody2D" unique_id=795273243]
+script = ExtResource("1_eggc8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206561506]
+position = Vector2(3.5762787e-06, -3.5762787e-06)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_6k5vl")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=394963895]
+shape = SubResource("CapsuleShape2D_hag2f")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1789591534]
+blend_mode = 2
+texture = SubResource("GradientTexture2D_wjt4n")
+texture_scale = 5.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2051425073]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1110668345]
+material = SubResource("CanvasItemMaterial_hoywy")
+emitting = false
+amount = 3000
+texture = SubResource("GradientTexture2D_51v06")
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_rbnvw")

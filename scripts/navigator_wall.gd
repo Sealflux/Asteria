@@ -24,8 +24,33 @@ var _accumulated_time: float = 0.0
 var _edge_tiles_cache: Dictionary = {}
 
 func _ready() -> void:
+	_find_target_and_particles()
 	_verify_setup()
 	rebuild_edge_cache()
+
+func _find_target_and_particles() -> void:
+	if not player:
+		if has_node("%Navigator"):
+			var node = get_node("%Navigator")
+			if node is CharacterBody2D:
+				player = node as CharacterBody2D
+		if not player:
+			player = _find_child_by_name_and_type(get_tree().root, "Navigator")
+
+	if player and not reveal_particles:
+		for child in player.get_children():
+			if child is GPUParticles2D:
+				reveal_particles = child as GPUParticles2D
+				break
+
+func _find_child_by_name_and_type(node: Node, target_name: String) -> CharacterBody2D:
+	if node.name == target_name and node is CharacterBody2D:
+		return node as CharacterBody2D
+	for child in node.get_children():
+		var found = _find_child_by_name_and_type(child, target_name)
+		if found:
+			return found
+	return null
 
 func _verify_setup() -> void:
 	print("--- TILEMAP REVEAL SYSTEM INITIALIZED ---")
