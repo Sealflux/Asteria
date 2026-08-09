@@ -4,6 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://dfe502ugfukk6" path="res://scenes/simple_trap.tscn" id="2_egpjd"]
 [ext_resource type="PackedScene" uid="uid://cjg6tuwdqg60n" path="res://scenes/tile_map_layer.tscn" id="3_ty81x"]
 [ext_resource type="PackedScene" uid="uid://e8i4d4wx30uk" path="res://scenes/tilemaplayer_2.tscn" id="4_p8wlm"]
+[ext_resource type="Texture2D" uid="uid://dclkqxd51x5au" path="res://scenes/keyboard_c.svg" id="5_ty81x"]
+[ext_resource type="Texture2D" uid="uid://bjff8sqvhnhjm" path="res://scenes/keyboard_w.png" id="6_apjht"]
+[ext_resource type="Texture2D" uid="uid://dnmjpd11hse7d" path="res://scenes/keyboard_s.png" id="7_mb1f3"]
+[ext_resource type="Texture2D" uid="uid://b001fbgmcvab8" path="res://scenes/keyboard_d.png" id="8_g036g"]
+[ext_resource type="Texture2D" uid="uid://vqmoamav1u2c" path="res://scenes/keyboard_a.png" id="9_pil6x"]
 
 [node name="Intro" type="Node2D" unique_id=1801399948]
 
@@ -25,11 +30,68 @@ scale = Vector2(1, 1)
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=865201250]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
 offset_bottom = 40.0
+grow_horizontal = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1148528120]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 364.0
+offset_top = 48.0
+offset_right = 569.0
+offset_bottom = 71.0
+rotation = -0.011326283
+text = "Press               to continue"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control" unique_id=1628599902]
+layout_mode = 0
+offset_left = -523.0
+offset_top = 141.0
+offset_right = -318.0
+offset_bottom = 164.0
+rotation = -0.011326283
+text = "or Arrow Keys to move"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=782884193]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 29.0
+offset_right = 471.0
+offset_bottom = 93.0
+texture = ExtResource("5_ty81x")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control" unique_id=994940264]
+layout_mode = 0
+offset_left = -466.0
+offset_top = 20.0
+offset_right = -402.0
+offset_bottom = 84.0
+texture = ExtResource("6_apjht")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control" unique_id=310338803]
+layout_mode = 0
+offset_left = -466.0
+offset_top = 75.0
+offset_right = -402.0
+offset_bottom = 139.0
+texture = ExtResource("7_mb1f3")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control" unique_id=350401046]
+layout_mode = 0
+offset_left = -412.0
+offset_top = 75.0
+offset_right = -348.0
+offset_bottom = 139.0
+texture = ExtResource("8_g036g")
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/Control" unique_id=1709747156]
+layout_mode = 0
+offset_left = -520.0
+offset_top = 75.0
+offset_right = -456.0
+offset_bottom = 139.0
+texture = ExtResource("9_pil6x")
