@@ -1,3 +1,4 @@
+class_name Trap
 extends Area2D
 signal survivor_died
 signal spawn_survivor
