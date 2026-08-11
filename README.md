@@ -4,7 +4,7 @@ A game about balancing sacrifice and information
 In this game made for Horizons Polaris, a group of Starseekers set out on a journey to explore the dark forest, avoiding traps and navigating invisible mazes along the way. 
 ## Demo On Itch
 [**Link**](https://sealflux.itch.io/asteria)
-![image](https://cdn.hackclub.com/019ff24c-e6c8-7f4a-9b40-ee47a8ec8c9f/paste-1786476553634.png)
+![image](https://cdn.hackclub.com/019ff255-4425-74e7-8132-9b82e7e1978a/paste-1786477101518.png)
 ## Controls
 Move with arrow keys or WASD. 
 ## Prompt
